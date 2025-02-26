@@ -3,6 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  'mbbill/undotree',
   'aymericbeaumet/vim-symlink',
   'theprimeagen/harpoon',
   'tpope/vim-fugitive',
