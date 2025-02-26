@@ -94,10 +94,18 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = false
 
 -- Set the background to transparent
-vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_create_autocmd("ColorScheme", {
+	pattern = "*",
+	callback = function()
+	  -- Use NONE for transparency
+	  vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
+	  vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE", ctermbg = "NONE" })
+	  vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE", ctermbg = "NONE" })
+	  vim.api.nvim_set_hl(0, "CursorLine", { bg = "NONE", ctermbg = "NONE" })
+	end,
+  })
 
--- [[ Setting options ]]
+  -- [[ Setting options ]]
 require 'options'
 
 -- [[ Basic Keymaps ]]
