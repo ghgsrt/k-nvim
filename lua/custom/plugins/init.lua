@@ -3,7 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-	'HiPhish/rainbow-delimiters.nvim'
+  'HiPhish/rainbow-delimiters.nvim',
   'mbbill/undotree',
   'aymericbeaumet/vim-symlink',
   'theprimeagen/harpoon',
